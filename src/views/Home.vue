@@ -1,18 +1,31 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Blog/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
+import Blog from '../components/Blog.vue'
+import axios from 'axios'
+import { ref } from '@vue/reactivity'
 export default {
-  name: 'Home',
-  components: {
-    HelloWorld
+  name: "Home",
+  components: { Blog },
+  setup(){
+    // const weathers = ref([])
+    // const load = async () => {
+    //   let data = await axios.get('https://localhost:44356/WeatherForecast').then(response => {
+    //     return response.data
+    //   })
+    //   weathers.value = await data
+    // }
+
+    // load()
+    // return{ weathers }
   }
 }
 </script>
+
+<style>
+  
+</style>
